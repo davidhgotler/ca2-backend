@@ -1,0 +1,36 @@
+Processor Settings
+R: 2
+k0: 3
+k1: 2
+k2: 1
+F: 4
+
+INST	FETCH	DISP	SCHED	EXEC	STATE
+1	1	2	3	4	5
+2	1	2	3	4	5
+3	1	2	3	4	6
+4	1	2	3	4	6
+5	2	3	4	5	7
+6	2	3	4	6	7
+7	2	3	4	6	8
+8	2	3	4	5	8
+9	3	4	5	6	9
+10	3	4	5	7	9
+11	3	4	5	8	10
+12	3	4	5	7	10
+13	4	5	7	8	11
+14	4	5	7	9	11
+15	4	5	8	10	12
+16	4	5	8	11	12
+17	5	6	9	11	13
+18	5	6	9	10	13
+19	5	6	10	11	14
+20	5	6	10	12	14
+21	7	8	13	14	15
+Processor stats:
+Total instructions: 22
+Avg Dispatch queue size: 12.000000
+Maximum Dispatch queue size: 26
+Avg inst fired per cycle: 1.000000
+Avg inst retired per cycle: 1.000000
+Total run time (cycles): 15

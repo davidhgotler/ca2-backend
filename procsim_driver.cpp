@@ -27,19 +27,17 @@ void print_help_and_exit(void) {
 bool read_instruction(proc_inst_t* p_inst)
 {
     int ret;
-    
     if (p_inst == NULL)
     {
         fprintf(stderr, "Fetch requires a valid pointer to populate\n");
         return false;
     }
     
-    ret = fscanf(stdin, "%x %d %d %d %d\n", &p_inst->instruction_address,
+    ret = fscanf(inFile, "%x %d %d %d %d\n", &p_inst->instruction_address,
                  &p_inst->op_code, &p_inst->dest_reg, &p_inst->src_reg[0], &p_inst->src_reg[1]); 
     if (ret != 5) {
         return false;
     }
-    
     return true;
 }
 
